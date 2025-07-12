@@ -11,15 +11,10 @@ public class ball_script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        rb = GetComponent<Rigidbody2D>(); // Rigidbody2Dï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½æ“¾
-        float rad = Angle * Mathf.Deg2Rad; // ï¿½pï¿½xï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½É•ÏŠï¿½
-        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)); // ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Z
-        rb.linearVelocity = direction * speed; // ï¿½ï¿½ï¿½Ë‘ï¿½ï¿½xï¿½Eï¿½pï¿½xï¿½ï¿½İ’ï¿½
-        rb = GetComponent<Rigidbody2D>(); // Rigidbody2Dï¿½Rï¿½ï¿½ï¿½|ï¿½[ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½ï¿½æ“¾
-        float rad = Angle * Mathf.Deg2Rad; // ï¿½pï¿½xï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½É•ÏŠï¿½
-        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)); // ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Z
-        rb.linearVelocity = direction * speed; // ï¿½ï¿½ï¿½Ë‘ï¿½ï¿½xï¿½Eï¿½pï¿½xï¿½ï¿½İ’ï¿½
+        rb = GetComponent<Rigidbody2D>(); // Rigidbody2DƒRƒ“ƒ|[ƒlƒ“ƒg‚ğæ“¾
+        float rad = Angle * Mathf.Deg2Rad; // Šp“x‚ğƒ‰ƒWƒAƒ“‚É•ÏŠ·
+        Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)); // •ûŒüƒxƒNƒgƒ‹‚ğŒvZ
+        rb.linearVelocity = direction * speed; // ”­Ë‘¬“xEŠp“x‚ğİ’è
     }
 
     // Update is called once per frame
@@ -30,18 +25,14 @@ public class ball_script : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        // ï¿½ï¿½ÊŠOï¿½Ésï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-        // ï¿½ï¿½ÊŠOï¿½Ésï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ‰æ–ÊŠO‚És‚Á‚½‚Æ‚«ƒIƒuƒWƒFƒNƒg‚ğÁ‹
         Destroy(gameObject);
     }
 
     /*private void Decidevector()
     {
-        float rad = Angle * Mathf.Deg2Rad; // ï¿½pï¿½xï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½É•ÏŠï¿½
-        Vector3 direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0); // ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Z
-        vec = direction * speed * Time.deltaTime; // ï¿½ï¿½ï¿½xï¿½Æï¿½ï¿½Ô‚ï¿½ï¿½|ï¿½ï¿½ï¿½ÄˆÚ“ï¿½ï¿½Ê‚ï¿½ï¿½vï¿½Z
-        float rad = Angle * Mathf.Deg2Rad; // ï¿½pï¿½xï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½É•ÏŠï¿½
-        Vector3 direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0); // ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Z
-        vec = direction * speed * Time.deltaTime; // ï¿½ï¿½ï¿½xï¿½Æï¿½ï¿½Ô‚ï¿½ï¿½|ï¿½ï¿½ï¿½ÄˆÚ“ï¿½ï¿½Ê‚ï¿½ï¿½vï¿½Z
+        float rad = Angle * Mathf.Deg2Rad; // Šp“x‚ğƒ‰ƒWƒAƒ“‚É•ÏŠ·
+        Vector3 direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0); // •ûŒüƒxƒNƒgƒ‹‚ğŒvZ
+        vec = direction * speed * Time.deltaTime; // ‘¬“x‚ÆŠÔ‚ğŠ|‚¯‚ÄˆÚ“®—Ê‚ğŒvZ
     }*/
 }
