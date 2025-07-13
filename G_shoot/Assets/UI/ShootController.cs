@@ -37,8 +37,13 @@ public class ShootController : MonoBehaviour
         }
         else if (state == 3)
         {
+            if (ballRb == null)
+            {
+                return;
+            }
             if (ballRb.linearVelocity.magnitude == 0f)
             {
+                state = 0; // ボールが静止したら状態をリセット
                 gameManager.GameOver(); // ボールが静止したらゲームオーバー
             }
         }
