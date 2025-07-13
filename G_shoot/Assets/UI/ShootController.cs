@@ -14,6 +14,7 @@ public class ShootController : MonoBehaviour
 
     public AngleController angleController;
     public PowerController powerController;
+    public GameManager myManager;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class ShootController : MonoBehaviour
             powerController.actvate = true; // ゲージを動かす
             state = 2;
         }
-        else if (state == 2) 
+        else if (state == 2)
         {
 
         }
@@ -76,4 +77,5 @@ public class ShootController : MonoBehaviour
         Vector2 direction = Quaternion.Euler(0, 0, angleDeg) * Vector2.right;
         ballRb.AddForce(direction * power, ForceMode2D.Impulse);
     }
+    
 }
