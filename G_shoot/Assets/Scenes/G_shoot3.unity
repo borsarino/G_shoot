@@ -437,9 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Kick
-
-'
+  m_text: Retry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1434,19 +1432,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 528354733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 775181652}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ToStage1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &528354733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2481,7 +2467,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 775181652}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ToStage3
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3517,7 +3503,7 @@ GameObject:
   - component: {fileID: 1496239964}
   - component: {fileID: 1496239963}
   m_Layer: 5
-  m_Name: Kick
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3541,7 +3527,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -230, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496239963
 MonoBehaviour:
@@ -4095,8 +4081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopButton: {fileID: 20236234}
-  retryButton: {fileID: 0}
-  nextButton: {fileID: 0}
+  retryButton: {fileID: 1496239963}
+  nextButton: {fileID: 528354732}
   BackButton: {fileID: 1838043116}
   shootController: {fileID: 1319541450}
 --- !u!4 &1941387508

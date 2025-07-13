@@ -28,10 +28,10 @@ public class SelectController : MonoBehaviour
                 SceneManager.LoadScene("G_shoot");
                 break;
             case 2:
-                SceneManager.LoadScene("G_shoot");
+                SceneManager.LoadScene("G_shoot2");
                 break;
             case 3:
-                SceneManager.LoadScene("G_shoot");
+                SceneManager.LoadScene("G_shoot3");
                 break;
             default:
                 Debug.LogError("無効なステージ番号です: " + stageNumber);

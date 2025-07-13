@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/G_shoot.unity
     guid: 61827ababc3146848b655789121b6b59
   - enabled: 1
+    path: Assets/Scenes/G_shoot2.unity
+    guid: 97d8c8eaeb8d83d4cba4595998f08cbf
+  - enabled: 1
+    path: Assets/Scenes/G_shoot3.unity
+    guid: 4dfefa4347ebf7c478ee52661de95292
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 6d8bfeae674a4d54e820aa6a1bcebdaa
   m_configObjects:

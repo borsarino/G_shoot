@@ -51,4 +51,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("G_shoot3");
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
