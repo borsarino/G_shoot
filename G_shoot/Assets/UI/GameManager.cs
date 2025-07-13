@@ -22,33 +22,33 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
-        Debug.Log("�Q�[���N���A");
+        Debug.Log("Game Clear");
         gameClearUI.SetActive(true);
     }
 
     public void GameOver()
     {
-        Debug.Log("�Q�[���I�[�o�[");
+        Debug.Log("Game Over");
         gameOverUI.SetActive(true);
     }
 
     public void ToTitle()
     {
-        SceneManager.LoadScene("Title"); // �^�C�g���V�[���ɑJ��
+        SceneManager.LoadScene("Title");
     }
 
     public void ToStage1()
     {
-        SceneManager.LoadScene("G_shoot"); // �X�e�[�W1�ɑJ��
+        SceneManager.LoadScene("G_shoot");
     }
 
     public void ToStage2()
     {
-        SceneManager.LoadScene("G_shoot2"); // �X�e�[�W1�ɑJ��
+        SceneManager.LoadScene("G_shoot2");
     }
 
     public void ToStage3()
     {
-        SceneManager.LoadScene("G_shoot3"); // �X�e�[�W1�ɑJ��
+        SceneManager.LoadScene("G_shoot3");
     }
 }
