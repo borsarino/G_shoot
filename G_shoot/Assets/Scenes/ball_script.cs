@@ -7,6 +7,7 @@ public class ball_script : MonoBehaviour
     public float speed = 1;
     public float Angle = 45;
     private Rigidbody2D rb;
+    public GameManager myManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,17 @@ public class ball_script : MonoBehaviour
     {
         // 画面外に行ったときオブジェクトを消去
         Destroy(gameObject);
+        myManager.GameOver();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // 衝突したオブジェクトのタグが"wall"の場合、角度を反転
+        if (collision.gameObject.tag == "Finish")
+        {
+            Destroy(this.gameObject); // "finish"タグのオブジェクトに衝突したら自分を消去
+            myManager.GameClear(); // ゲームクリアのメソッドを呼び出す
+        }
     }
 
     /*private void Decidevector()
