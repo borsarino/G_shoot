@@ -7,8 +7,8 @@ public class BallController : MonoBehaviour
 
     void OnBecameInvisible()
     {
+        Destroy(gameObject); // ボールが画面外に出たらゲームオーバー
         myManager.GameOver();
-        Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
