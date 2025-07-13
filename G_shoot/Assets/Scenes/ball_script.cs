@@ -31,6 +31,14 @@ public class ball_script : MonoBehaviour
         myManager.GameOver();
     }
 
+    private void StopBall()
+    {
+        if (rb.IsSleeping())
+        {
+            myManager.GameOver();
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // 衝突したオブジェクトのタグが"wall"の場合、角度を反転
