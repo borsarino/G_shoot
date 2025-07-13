@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
         stopButton.onClick.AddListener(OnStopClicked);
 
         retryButton.onClick.AddListener(OnRetryClicked);
-        //nextButton.onClick.AddListener(OnNextStageClicked);
+        nextButton.onClick.AddListener(OnNextStageClicked);
         BackButton.onClick.AddListener(OnBackButtonClicked);
     }
 
