@@ -15,8 +15,8 @@ public class BallController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Finish"))
         {
-            myManager.GameClear();
             Destroy(gameObject);
+            myManager.GameClear();
         }
     }
 }
