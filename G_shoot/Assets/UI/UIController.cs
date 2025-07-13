@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
         // STOPボタンは1回目で角度決定、2回目で力決定 → 発射
         stopButton.onClick.AddListener(OnStopClicked);
 
-        //retryButton.onClick.AddListener(OnRetryClicked);
+        retryButton.onClick.AddListener(OnRetryClicked);
         //nextButton.onClick.AddListener(OnNextStageClicked);
         BackButton.onClick.AddListener(OnBackButtonClicked);
     }

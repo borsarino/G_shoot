@@ -295,7 +295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313, y: 0}
+  m_AnchoredPosition: {x: -223, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201153168
@@ -2706,7 +2706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121.848, y: -0.00037479}
+  m_AnchoredPosition: {x: -115, y: -0.00037479}
   m_SizeDelta: {x: 66.63, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686979341
@@ -3365,9 +3365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Kick
-
-'
+  m_text: Retry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3800,7 +3798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopButton: {fileID: 201153168}
-  retryButton: {fileID: 0}
+  retryButton: {fileID: 1797821244}
   nextButton: {fileID: 0}
   BackButton: {fileID: 843585206}
   shootController: {fileID: 1212079293}
@@ -3832,7 +3830,7 @@ GameObject:
   - component: {fileID: 1797821245}
   - component: {fileID: 1797821244}
   m_Layer: 5
-  m_Name: Kick
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3855,8 +3853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -335, y: -0.00037517}
+  m_SizeDelta: {x: 61.294, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797821244
 MonoBehaviour:
