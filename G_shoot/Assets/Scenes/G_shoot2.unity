@@ -5342,7 +5342,7 @@ MonoBehaviour:
   stopButton: {fileID: 379918945}
   angleController: {fileID: 287857399}
   powerController: {fileID: 1939867382}
-  myManager: {fileID: 0}
+  gameManager: {fileID: 202889058}
 --- !u!4 &1276405348
 Transform:
   m_ObjectHideFlags: 0

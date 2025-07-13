@@ -14,7 +14,7 @@ public class ShootController : MonoBehaviour
 
     public AngleController angleController;
     public PowerController powerController;
-    public GameManager myManager;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -35,9 +35,12 @@ public class ShootController : MonoBehaviour
             powerController.actvate = true; // ゲージを動かす
             state = 2;
         }
-        else if (state == 2)
+        else if (state == 3)
         {
-
+            if (ballRb.linearVelocity.magnitude == 0f)
+            {
+                gameManager.GameOver(); // ボールが静止したらゲームオーバー
+            }
         }
     }
 
