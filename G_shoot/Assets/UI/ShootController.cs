@@ -4,15 +4,17 @@ using UnityEngine.UI;
 public class ShootController : MonoBehaviour
 {
     public Rigidbody2D ballRb;
-    public Image angleMeter;
-    public Image powerMeter;
     public float maxAngle = 90f;
-    public float maxPower = 10f;
+    public float maxPower = 300f;
     public Button stopButton;
 
     private float angleValue = 0f;
     private float powerValue = 0f;
-    private int state = 0; // 0:角度選択中, 1:パワー選択中, 2:発射済み
+    private int state = 0; // 0:角度選択中, 1:パワー選択中, 2:発射, 3:発射後
+
+    public AngleController angleController;
+    public PowerController powerController;
+
     void Start()
     {
         stopButton.onClick.AddListener(OnStopButtonClicked);
@@ -20,15 +22,21 @@ public class ShootController : MonoBehaviour
 
     void Update()
     {
-        if (state == 0) // 角度を選んでる状態
+        if (state == 0) // 角度決定中
         {
             angleValue = Mathf.PingPong(Time.time, 1f);
-            angleMeter.fillAmount = angleValue;
+            float angleDeg = angleValue * maxAngle;
+            angleController.SetAngle(angleDeg); // 見た目の回転のみ
         }
-        else if (state == 1) // パワーを選んでる状態
+        else if (state == 1) // パワー決定中
         {
-            powerValue = Mathf.PingPong(Time.time, 1f);
-            powerMeter.fillAmount = powerValue;
+            powerController.ResetPower(); // パワーゲージをリセット
+            powerController.actvate = true; // ゲージを動かす
+            state = 2;
+        }
+        else if (state == 2) 
+        {
+
         }
     }
 
@@ -36,17 +44,27 @@ public class ShootController : MonoBehaviour
     {
         if (state == 0)
         {
-            // 角度確定
+            Debug.Log("角度決定：" + angleValue * maxAngle + "度");
             state = 1;
-            Debug.Log("角度決定：" + (angleValue * maxAngle) + "度");
+            return;
         }
-        else if (state == 1)
+        else if (state == 2)
         {
-            // パワー確定 → 発射
-            state = 2;
-            Shoot();
-            stopButton.interactable = false; // ボタンを無効にする
-            Debug.Log("パワー決定：" + (powerValue * maxPower));
+            powerController.FixPower(); // ゲージ止める
+            powerValue = powerController.powerValue;
+            stopButton.interactable = false;
+            Debug.Log("パワー決定：" + powerValue * maxPower);
+            if (ballRb != null)
+            {
+                Shoot(); // 発射処理
+                state = 3; // 発射後の状態に変更
+                Debug.Log("ボールを発射しました。");
+            }
+            else
+            {
+                Debug.LogError("Rigidbody2Dが設定されていません。");
+            }
+            return;
         }
     }
 

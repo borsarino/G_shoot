@@ -7,7 +7,8 @@ public class UIController : MonoBehaviour
     public Button stopButton;
     public Button retryButton;
     public Button nextButton;
-    public Button stageSelectButton;
+
+    public Button BackButton; // 追加: 戻るボタン
 
     public ShootController shootController;
 
@@ -16,14 +17,15 @@ public class UIController : MonoBehaviour
         // STOPボタンは1回目で角度決定、2回目で力決定 → 発射
         stopButton.onClick.AddListener(OnStopClicked);
 
-        retryButton.onClick.AddListener(OnRetryClicked);
-        nextButton.onClick.AddListener(OnNextStageClicked);
-        stageSelectButton.onClick.AddListener(OnStageSelectClicked);
+        //retryButton.onClick.AddListener(OnRetryClicked);
+        //nextButton.onClick.AddListener(OnNextStageClicked);
+        BackButton.onClick.AddListener(OnBackButtonClicked);
     }
 
     void OnStopClicked()
     {
         shootController.OnStopButtonClicked(); // 角度→力→発射を内部で制御
+        Debug.Log("ストップボタン");
     }
 
     void OnRetryClicked()
@@ -46,8 +48,8 @@ public class UIController : MonoBehaviour
         }
     }
 
-    void OnStageSelectClicked()
+    void OnBackButtonClicked()
     {
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("Title"); // 戻るボタンでメインメニューに戻る
     }
 }
