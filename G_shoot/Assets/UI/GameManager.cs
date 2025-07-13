@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    private bool isGameClear = false;
     public GameObject gameClearUI;
     public GameObject gameOverUI;
 
@@ -24,10 +25,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Clear");
         gameClearUI.SetActive(true);
+        isGameClear = true;
     }
 
     public void GameOver()
     {
+        if (isGameClear) return; // すでにクリアしている場合は何もしない
         Debug.Log("Game Over");
         gameOverUI.SetActive(true);
     }
@@ -50,5 +53,10 @@ public class GameManager : MonoBehaviour
     public void ToStage3()
     {
         SceneManager.LoadScene("G_shoot3");
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
